@@ -25,7 +25,6 @@ packer.startup(function(use)
     }
     use({
         "rebelot/kanagawa.nvim",
-        as = "kanagawa",
         config = function()
             vim.cmd("colorscheme kanagawa")
         end
@@ -91,4 +90,7 @@ packer.startup(function(use)
             require("nvim-autopairs").setup {}
         end
     }
+    use { 'akinsho/git-conflict.nvim', tag = "*", config = function()
+        require('git-conflict').setup()
+    end }
 end)
